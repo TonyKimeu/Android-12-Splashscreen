@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun customizeSplashScreen(splashScreen: SplashScreen) {
-        // keepSplashScreenLonger(splashScreen)
+        keepSplashScreenLonger(splashScreen)
         customizeSplashScreenExit(splashScreen)
     }
 
@@ -204,7 +204,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    @RequiresApi(Build.VERSION_CODES.M)
     private fun hookViewLayout(splashScreenViewProvider: SplashScreenViewProvider) {
         Log.d("Splash", "hookViewLayout()")
         val rootWindowInsets = splashScreenViewProvider.view.rootWindowInsets
